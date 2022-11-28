@@ -5,10 +5,26 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        backgroundColor: Colors.indigo,
+    const fontSize = TextStyle(fontSize: 30);
+    return Scaffold(
+        appBar: AppBar(
+          title: const Center(child: Text('HomeScreen')),
+          elevation: 0.0,
+        ),
         body: Center(
-          child: Text('Hola Mundo'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Text(
+                'Numero de clicks',
+                style: fontSize,
+              ),
+              Text(
+                '0',
+                style: fontSize,
+              )
+            ],
+          ),
         ));
   }
 }
